@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label>
+    <input name="Distribution[]" type="checkbox" id="dist_europe" class="required minlength:1" value="Europe" />  Europe 
+</label>
+
+<select size="4" name="lstFruits" multiple="multiple" id="lstFruits" style="height: 60px;
+    width: 150px;">
+    <option value="0">All</option>
+    <option value="1">Mango</option>
+    <option value="2">Apple</option>
+    <option value="3">Banana</option>
+    <option value="4">Guava</option>
+    <option value="5">Pineapple</option>
+    <option value="6">Papaya</option>
+    <option value="7">Grapes</option>
+</select>
+<span id="ctl02" style="color: Red; visibility: hidden;">Maximum 2 items</span>
+<input type="button" value="Validate" onclick = "ValidateListBox()" />
+<script type="text/javascript">
+    function ValidateListBox() {
+        var max_allowed = 2;
+        var count = 0;
+        var listbox = document.getElementById("lstFruits");
+        if (!listbox.options[0].selected) {
+            for (i = 1; i < listbox.options.length; i++) {
+                if (listbox.options[i].selected) {
+                    count++;
+                }
+            }
+        } else {
+            //All selected - No validation
+            return true;
+           
+        }
+ 
+        if (count > max_allowed) {
+            alert("You can select maximum " + max_allowed);
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+
+</html>

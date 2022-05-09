@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form    name="my_from" >
+ <img  id="pic" src="Path 1.png" alt="">
+ <br>
+ <input type="text" name="name" >
+ <br>
+ <br>
+ <input type="tel" name="cin">
+ <br>
+ <br>
+ <input type="email" name="email_x" id="ki" style="width:100px  ; ">
+
+ <br>
+ <br>
+ <input type="password"name="pass">
+
+ <input type="button"  onclick="validation_form()"></input>
+
+  </form>
+</body>
+<script>
+  /*
+  function validit (){
+    var o=document.forms["sehd"]["h"].value;
+    if(o==""){
+      alert("fill up")
+      ,"cin","email_x","pass"
+    }
+  }
+*/
+  function validation_form(){
+    var check_in=document.forms["my_from"]["name"].values;
+    if(check_in="")
+    {
+      alert("fill the input out")
+    }
+  }
+  /*
+   function yy(){
+     var get_inp =document.getElementById("ki");
+     var email_x =get_inp.value;
+     var str=/^[a-zA-Z0-9]*+@gmail.com+$/;
+     if(!str.test(email_x)){ 
+       alert("fill up");
+     }
+   }
+   */
+</script>
+</html>

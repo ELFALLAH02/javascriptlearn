@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+<head>
+<title>
+  trying 
+</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <form action="sehd.php" name="myfrom" id="sehd">
+    <h1>
+      The best form ever
+    </h1>
+    <table>
+      <tr>
+
+     <td> <label for="name">Name:</label></td>
+     <td> <input type="text" name="name" id="name"></td>
+    </tr>
+    <tr>
+    <td><label for="last_name">Last Name:</label></td>
+      <td> <input type="text" name="last_name" id="last_name"></td>
+    </tr>
+    <tr>
+        <td> <label for="email">Email:</label></td>
+          <td> <input type="email" name="email" id="email"></td>
+        </tr>
+        <tr>
+            <td>  <label for="pass">Password:</label></td>
+              <td> <input type="password" name="pass" id="pass" required></td>
+            </tr>
+              <tr>
+                <td> <label for="tel_eph">Phone Number:</label></td>
+                  <td>  <input type="tel" name="tel_eph" id="teleph"></td>
+                </tr> 
+                  <tr>
+                    <td>  <label for="date_times">Date:</label></td>
+                      <td> <input type="text" max_length="25" onkeypress="return limitMe(event, this);"/></td>
+                    </tr>
+                      <tr>
+                        <td>  <label for="contry">country:</label></td>
+                          <td> <select name="country" id="coun">
+                           <option value="sef">morocco  </option>
+            <option value="sef">morocco  </option>
+            <option value="sef">morocco  </option>
+            <option value="sef">morocco  </option>
+            <option value="sef">morocco  </option>
+            
+     </select></td>
+    </tr>
+<tr>
+  <td>  <label for="contry">country:</label></td>
+
+    <td> <select name="ask" id="sd" multiple >
+      <option value="sef">morocco  </option>
+      <option value="sef">morocco  </option>
+      <option value="sef">morocco  </option>
+      <option value="sef">morocco  </option>
+     </select>
+    </td>
+    </table>
+  </tr>
+ <button type="submit" style="width: 100px; height: 30px;"> click me </button>
+
+
+
+
+
+
+
+
+
+
+
+
+  </form>
+  
+
+
+
+
+</body>
+
+
+
+
+
+<script>
+  $(document).ready(function(){
+    $("#name").hover(function(){
+      $( this ).fadeOut( 100 );
+  $( this ).fadeIn( 500 );     
+
+     })
+  
+  })
+</script>
+
+
+  
+</HTML>

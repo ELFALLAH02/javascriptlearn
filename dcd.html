@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <title>Document</title>
+</head>
+<body>
+  <div id="sehd">
+    <form action=""  id="form" name="my_from" >
+  <fieldset>
+    <legend>Inscription</legend>
+     <table>
+       <tr>
+         <td>
+          <label for="pn">Prenom et Nom <span style="color: red;">*</span></label>
+  
+         </td>
+         <td>
+          <input type="text" name="pn" class="inp" id="full_him">
+       
+  
+         </td>
+       </tr>
+       <tr>
+        <td>
+         <label for="pn">CIN <span style="color: red;">*</span></label>
+  
+        </td>
+        <td  >
+         <input type="text" name="pn"  id="cin" maxlength="8">
+         <br>
+         <span id="hj" style="visibility: hidden;">sdsdffsfsffsdf</span>
+         
+        <!-- <tr>
+           <td>
+
+           </td>
+           <td>
+            <span id="hj" style="visibility: hidden;">sdsdffsfsffsdf</span>
+
+           </td>
+         </tr>
+        </td>-->
+        
+      </tr>
+      <tr>
+        <td>
+         <label for="pn">Adresse email <span style="color: red;">*</span></label>
+  
+        </td>
+        <td>
+         <input type="email" name="pn"  id="Adr">
+  
+        </td>
+      </tr>
+      <tr>
+        <td colspan="-1">
+          <label for="">Niveau scolaire</label>
+        </td>
+        <td>
+        <input type="radio" name="secolair" value="secolair" id="radio1" class="inp">  <label for="secolair">secolair</label>
+        <input type="radio" name="Universtuer" value="Universtuer" id="radio2" class="inp">  <label for="Universtuer">Universtuer</label>
+        <input type="radio" name="secolair" value="secolair" id="radio3" class="inp">  <label for="secolair">secolair</label>
+        </td>
+    
+      </tr>
+      <tr>
+        <td>
+          <label for="pss"></label>
+        </td>
+        <td>
+          <input type="password" name="pss" id="PASSS" maxlength="6">
+        </td>
+      </tr>
+      <tr>
+        <td valign="top">
+          <label for="Modules">Modules de formtion</label>
+        </td>
+        <td >
+          <select  name="Modules" id="md" multiple="yes" class="inp" >
+            <option  value="HTML5" > HTML5</option>
+            <option value="CSS5">CSS5</option>
+            <option value="javascript">javascript</option>
+            <Option value="Jquery">Jquery</Option>
+  
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for=""> (<span style="color:red">*</span>) chan obligatoiur</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button type="button" id="env" onclick="valid_form()" >Envoyer</button>
+          
+          <button type="reset">Annuler</button>
+        </td>
+      </tr>
+     </table>
+  
+  </fieldset>
+      
+  </form>
+  </div>
+</body>
+<script>
+  
+  ////full name validation
+
+  
+ function valid_it(){
+   let full_name=$("#full_him").val();
+   if(full_name.length ==''){
+     $("#full_him").css("outline","1px solid red");
+   }
+   else{
+    $("#full_him").css("outline","1px solid green");
+
+   }
+  }
+   ///CIN validation
+   
+   
+   
+   function cin_valid_it(){
+   let cin_number=$("#cin").val();
+   var number_x =/^[0-9]+$/;
+   if(cin_number.length ==''){
+     $("#cin").css("outline","1px solid red");
+     
+   }
+   else{
+     if(!number_x.test(cin_number)){
+      $("#hj").css("visibility","visible")
+     }
+     else{
+      $("#cin").css("outline","1px solid green");
+
+     }
+
+   }
+ }
+ function fg(){
+   var k =$("#full_him").val();
+   var km =$("#cin").val();
+   
+      alert("Full name"+ k + "CIN" + km);
+   
+ }
+ function email_x(){
+   let email_vl=$("#Adr").val();
+   var sed=/^[a-zA-Z0-9]+@gmail.com+$/;
+   if(email_vl==''){
+    $("#Adr").css("outline","1px solid red");
+   }
+   else{
+    if(!sed.test(email_vl)){
+      alert("set a valid email")
+
+   }
+   else{
+    $("#Adr").css("outline","1px solid green");
+   }
+   }
+
+   
+ }
+
+ function valid_form(){
+   valid_it();
+   cin_valid_it();
+   email_x();
+   select_me();
+   valid_pass();
+   fg();
+ }
+ /*
+  function valid_name(){
+    var g =document.getElementById("full_him").value;
+    var g_ele=document.getElementById("full_him");
+
+    if(g==''){
+       g_ele.style.outline="1px solid red";
+    }
+    else{
+      g_ele.style.outline="1px solid green";
+    }
+  }
+  function valid_cin(){
+    var cin_elem=document.getElementById("cin");
+    var cin_vale=document.getElementById("cin").value;
+    if(cin_vale==''){
+      g_ele.style.outline="1px solid red";
+    }
+    else{
+
+      var he=/^[0-9]+$/;
+
+      if(!he.test(cin_vale)){
+        alert("add a vilde cin")
+      }
+      else{
+        cin_elem.style.outline="1px solid green";
+      }
+    }
+
+  }
+  function valid_email(){
+    var email_
+  }
+  function pass_check(){
+    var pass=document.getElementById("PAS").value;
+    var pass_elem=document.getElementById("PSS");
+    var se=/^[a-z]+$/;
+    var ff=/^[A-Z]+$/;
+    var df=/^[0-9]+$/;
+    if(pass==''){
+      pass_elem.style.outline="1px solid red";
+    }
+    else{
+            if(!se.test(pass)){
+              alert("dfdfvdf")
+            }
+            else{
+              pass_elem.style.outline="1px solid green";
+            }
+    }
+
+  }
+  function valid_form(){
+    valid_name();
+    valid_cin();
+    pass_check();
+  }
+*/
+  </script>
+</html>

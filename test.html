@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <title>Document</title>
+</head>
+<body>
+  <span id="t1"> The best live </span>
+  <div style="background-color: #ffecac;">
+    <img id="img1" src="Path 51.png" alt="">
+    <button type="button" onclick="fg()">f</button>
+  </div>
+  <div>
+    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi culpa non quia et, illo architecto pariatur voluptates labore assumenda ut facilis! Minima, maiores assumenda.
+       Nemo, suscipit. Officiis atque quisquam reprehenderit?</h3>
+       <button id="btn_hide" type="button">click me up</button>
+  </div>
+</body>
+<script>
+  ///////
+   $(document).ready(function(){
+      $("span").hover(function(){
+        $(this).css("color","red");
+      })    
+      
+   })
+ 
+  ///////////
+  
+      $("img").hover(function(){
+        $(this).attr("src","path 1.png");
+      })    
+       function fg(){
+        var g = document.getElementById("img1");
+        g.hover(){
+          g.src.attr("src","path 1.png");
+        }
+          
+         
+        
+       }
+
+       function ghg(){
+             
+
+       }
+   ///////////////////////////////////
+   $(document).ready(function(){
+    $("#btn_hide").click(function(){
+      $("h3").hide()
+    }) 
+   })
+
+</script>
+</html>

@@ -1,0 +1,10 @@
+#se{
+  border-style: solid;
+border: 1px;
+}
+
+table{
+  margin: 12px;
+  visibility: visible;
+  box-shadow: 10px green;
+}
