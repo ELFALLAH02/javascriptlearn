@@ -1,0 +1,44 @@
+header{
+  border:1px solid blue;
+  margin-bottom: 5px;
+}
+.cen{
+  text-align:center;
+}
+#navbar{
+  
+  padding: 10px;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+}
+aside{
+  border:1px solid red;
+  width: 18%; /*This is how you can make the aside take a shape of ads  right card*/
+  float:right ;
+  height: 300px; 
+  
+}
+section{
+  border:1px solid red;
+  width: 80%;
+  height: 300PX;
+  margin-top: 8px;
+  
+
+}
+footer{
+  border: 1px solid blue; 
+  text-align: center;
+  margin-top: 7PX;
+  height: 20PX;
+
+}
+
+th{
+  text-align: center;
+}
