@@ -21,7 +21,7 @@ a{
 aside{
   border-style:solid;
   border-color: red;
-  width: 120px;
+  width: 18%;
   float:right ;
   height: 300px;
   margin-top:7px
@@ -29,7 +29,7 @@ aside{
 section{
   border-style:solid;
   border-color: red;
-  width: 440px;
+  width: 80%;
   height: 300px;
   margin-top: 7px;
   
