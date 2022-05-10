@@ -1,14 +1,12 @@
 header{
-  border-color: red;
-  border-style: solid;
+  border:1px solid blue;
   margin-bottom: 5px;
 }
 .cen{
   text-align:center;
 }
 #navbar{
-  border-color: blue;
-  border-style:solid;
+  border:1px solid blue;
   padding: 10px;
   text-align: center;
 }
@@ -19,16 +17,14 @@ a{
   padding: 10px;
 }
 aside{
-  border-style:solid;
-  border-color: red;
+  border:1px solid red;
   width: 18%;
   float:right ;
   height: 300px;
   margin-top:7px
 }
 section{
-  border-style:solid;
-  border-color: red;
+  border:1px solid red;
   width: 80%;
   height: 300px;
   margin-top: 7px;
@@ -36,8 +32,7 @@ section{
 
 }
 footer{
-  border-style:solid;
-  border-color: rgb(48, 20, 255);
+  border-style: 1px solid blue; 
   text-align: center;
   margin-top: 7PX;
   height: 20PX;
