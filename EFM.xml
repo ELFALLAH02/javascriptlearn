@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8">
+<xs:schema xmlns:xs="http..........">
+<xs:element name="journal">
+    <xs:complextype>
+      <xs:sequence>
+       <xs:element name="nomjournal" type="xs:string" >
+       <xs:element name="date" type="xs:date">
+       <xs:element name="auteurs" maxoccurs="unbounded">
+          <xs:complextype>
+             <xs:sequence>
+              <xs:element name="auteur" maxoccurs="unbounded" >
+                         <xs:complextype>
+                        <xs:sequence>
+                          <xs:element name="nom" type="xs:string">
+                          <xs:element name="nomdeplume" type="xs:string">
+                        </xs:sequence>
+                        <xs:attribute name="ref" type="xs:string" use="#Required">
+                         </xs:complextype>
+              </xs:element>
+             </xs:sequence>
+          </xs:complextype>
+       <xs:element name="dossier" maxoccurs="unbounded">
+            <xs:complextype>
+            <xs:sequence>
+            <xs:element name="article" maxoccurs="unbounded">
+            <xs:complextype>
+            <xs:sequence>
+               <xs:element name="titre" type="xs:string">
+               <xs:element name="pages" maxoccurs="unbounded"  >
+                       <xs:complextype>
+                        <xs:sequence> 
+                        <xs:element name="page" type="xs:int" maxoccurs="unbounded"  > 
+                        </xs:sequence>
+                       </xs:complextype>
+                       <xs:element name="resume" type="xs:string">  
+            </xs:sequence>
+            <xs:attribute name="href" type="xs:string" use="#required">
+            </xs:complextype>
+            </xs:sequence>
+           <xs:attribute name="theme" type="xs:string" use="#required">
+            </xs:complextype>
+    </xs:sequence>
+    </xs:complextype>
+</xs:element>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</xs:schema>
