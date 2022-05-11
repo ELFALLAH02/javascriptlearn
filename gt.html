@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <title>Document</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <td  >
+        <input type="text" name="pn"  id="cin" maxlength="8" style="width:80px ;">
+        <br>
+        <span id="hj" style="visibility: hidden;color: red;">This is not what</span> </td>
+
+    </tr>
+  </table>
+  <button type="button" onclick="cin_valid_it()"> click</button>
+</body>
+<script>
+    function cin_valid_it() {
+   let cin_number=$("#cin").val();
+   var number_x =/^[a-z]+[0-9]+[A-Z]+$/;
+   if(cin_number.length ==''){
+     $("#cin").css("outline","3px solid red");
+     
+   }
+   else{
+     if(!number_x.test(cin_number)){
+      $("#hj").css("visibility","visible")
+     }
+     else{
+      $("#cin").css("outline","3px solid green");
+
+     }
+
+   }
+ }
+</script>
+</html>
