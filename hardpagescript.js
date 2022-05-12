@@ -41,7 +41,7 @@ if(email_val.length==0){
     
   }
    else{
-        $("#email_X").css("outline" ,"3px solid green");
+    $("#email_x").css("outline" ,"3px solid green")
          $("#email_v").text("");
    } 
  }
@@ -52,8 +52,14 @@ if(email_val.length==0){
   pas.css("color","red");
 }
 else{
-  $("#pass_x").css("outline" ,"3px solid green")
-  $("#password_v").text("")
+  if(!exp_pass.test(pass_val)){
+    $("#password_v").text("enter a valid password");
+  }
+  else{
+    $("#pass_x").css("outline" ,"3px solid green")
+    $("#password_v").text("")
+  }
+ 
 }
 ///////////////////
 if(pass_c_val.length==0){
@@ -62,10 +68,15 @@ if(pass_c_val.length==0){
   pas.css("color","red");
 }
 else{
-  $("#pass_c_x").css("outline" ,"3px solid green")
-  $("#password_g_v").text("")
+  if(pass_val==pass_c_val){
+    $("#pass_c_x").css("outline" ,"3px solid green")
+    $("#password_g_v").text("")
+  }
+  else{
+    ("#password_g_v").text("The password id not the same")
+  }
+ 
 }
-
 
 
 
