@@ -1,17 +1,13 @@
 function valid_form(){
   var name_val=$("#name_x").val();
   var last_val=$("#last_x").val();
-
   var email_val=$("#email_x").val();
   var pass_val=$("#pass_x").val();
   var pass_c_val=$("#pass_c_x").val();
   var name_val=$("#name_x").val();
-  
   var exp=/^[a-zA-Z0-9._-]+@[a-z0-9]+\.[a-z]{2,4}$/;
-
   var exp_pass=/^[a-zA-Z0-9]{9}$/;
   var exp_number=/^[0-9]+$/;
-  
   if(name_val.length==0){
   
     var dd =$("#name_v").text("This input is required to fill")
@@ -45,6 +41,8 @@ if(email_val.length==0){
          $("#email_v").text("");
    } 
  }
+  //////////////end of email validtion ///////////////
+  
  ////////////////////
  if(pass_val.length==0){
   
@@ -68,19 +66,30 @@ if(pass_c_val.length==0){
   pas.css("color","red");
 }
 else{
+  if(!exp_pass.test(pass_c_val)){
+    $("#password_g_x").text("enter a valid password");
+  }
+  else{
+    
+    $("#password_g_v").text("")
+  }
+ 
   if(pass_val==pass_c_val){
     $("#pass_c_x").css("outline" ,"3px solid green")
     $("#password_g_v").text("")
   }
   else{
-    ("#password_g_v").text("The password id not the same")
+     var same = $("#password_g_v").text("The password is not the same")
+    same.css("color","red");
+  
   }
+ }
  
 }
 
 
 
 
-}
-  //////////////end of email validtion ///////////////
-  
+
+
+ 
